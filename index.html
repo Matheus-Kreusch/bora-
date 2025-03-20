@@ -116,6 +116,8 @@
         </div>
     </div>
 
+    <audio id="romanticSong" src="imgs/Lençol Dobrado_meme.mp3"></audio>
+
     <script>
         let escapeSpeed = 20; // Velocidade inicial do botão fugindo
 
@@ -124,6 +126,12 @@
             document.querySelector(".image-container").style.display = "block";
             document.querySelector(".buttons").style.display = "none";
             document.querySelectorAll(".question").forEach(el => el.style.display = "none");
+
+            // Tocar a música com volume reduzido
+            let audio = document.getElementById("romanticSong");
+            audio.volume = 0.05; // Define o volume para 30% (ajuste conforme necessário)
+            audio.play();
+
         }
 
         function moveButton() {
